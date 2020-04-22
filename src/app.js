@@ -4,7 +4,7 @@ const path = require('path')
 const geocode = require('../utils/forecast')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 app.set('view engine','hbs')
 app.set('views','../view')
 const publicDir = path.join(__dirname,'../public')
@@ -47,6 +47,6 @@ app.get('',(req,res)=>{
 
 
 
-app.listen(5000,()=>{
-    console.log('Server is running')
+app.listen(port,()=>{
+    console.log('Server is running on port '+port)
 })

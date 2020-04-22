@@ -8,7 +8,8 @@ weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
     const loc = search.value
     console.log(loc)
-    fetch('http://localhost:5000/help/?location='+loc).then((response)=>{
+    //fetch('http://localhost:5000/help/?location='+loc).then((response)=>{
+    fetch('/help/?location='+loc).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
             {
