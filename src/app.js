@@ -1,4 +1,3 @@
-
 const express = require('express')
 const path = require('path')
 const geocode = require('../utils/forecast')
@@ -6,7 +5,7 @@ const geocode = require('../utils/forecast')
 const app = express()
 const port = process.env.PORT || 3000
 app.set('view engine','hbs')
-app.set('views','../view')
+app.set('views','/view')
 const publicDir = path.join(__dirname,'../public')
 app.use(express.static(publicDir))
 
