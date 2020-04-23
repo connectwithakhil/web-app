@@ -20,7 +20,7 @@ weatherform.addEventListener('submit',(e)=>{
             {
                 message1.textContent = "The current humidity in this city is " +data.humidity
                 message2.textContent = "The country of this city is " +data.country
-                message3.textContent = "The population of this city is " +data.country
+                message3.textContent = "The population of this city is " +data.population
 
                 console.log(data.humidity)
                 console.log(data.country)
