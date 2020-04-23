@@ -3,6 +3,7 @@ const weatherform = document.querySelector('form')
 const search = document.querySelector('input')
 const message1 = document.querySelector('#m1')
 const message2 = document.querySelector('#m2')
+const message3 = document.querySelector('#m3')
 
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
@@ -17,8 +18,9 @@ weatherform.addEventListener('submit',(e)=>{
             }
             else
             {
-                message1.textContent = data.humidity
-                message2.textContent = data.country
+                message1.textContent = "The current humidity in this city is " +data.humidity
+                message2.textContent = "The country of this city is " +data.country
+                message3.textContent = "The population of this city is " +data.country
 
                 console.log(data.humidity)
                 console.log(data.country)
